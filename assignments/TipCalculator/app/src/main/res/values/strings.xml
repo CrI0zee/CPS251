@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="tipBtn">Tip amount will display here</string>
+    <string name="calculate_tip">Calculate Tip</string>
+</resources>
