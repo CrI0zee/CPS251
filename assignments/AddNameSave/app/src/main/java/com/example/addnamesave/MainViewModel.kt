@@ -1,19 +1,22 @@
 package com.example.addnamesave
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel(){
-    private var name = ""
-    private var output = ""
-    fun addName(value: String)
+    var name: MutableLiveData<String> = MutableLiveData()
+    var output = ""
+    fun addName()
     {
-        name = value
-        output = output + name + "\n"
-
+        name.let {
+            if (!it.value.equals("")) {
+                output = output + it.value + "\n"
+            } else {
+                output = "No name entered"
+            }
+        }
     }
 
-    fun displayName() : String
-    {
-        return output
-    }
+
+
 }
