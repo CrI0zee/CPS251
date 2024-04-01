@@ -12,7 +12,7 @@ import android.view.MenuItem
 import com.example.recycleview.databinding.ActivityMainBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
