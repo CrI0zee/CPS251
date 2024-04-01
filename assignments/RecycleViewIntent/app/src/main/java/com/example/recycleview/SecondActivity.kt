@@ -14,8 +14,12 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val extras = intent.extras ?: return
-        binding.titleText.text = extras.getString("itemTitle")
-        binding.itemDetails.text = extras.getString("itemDetails")
-        binding.img.setImageResource(extras.getInt("itemImage"))
+        val titleString = extras.getString("tString") // retrieve tString from intent.extras
+        val detailsString = extras.getString("dString")
+        val imageString = extras.getString("iString")
+
+        binding.titleText.text = titleString  // set tvTitle to titleString
+        binding.itemDetails.text = detailsString
+        binding.img.setImageResource(imageString!!.toInt())
     }
 }
